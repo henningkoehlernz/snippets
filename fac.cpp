@@ -52,7 +52,7 @@ int main(int argc, char**argv)
     }
     int x = atoi(argv[1]), delta = atoi(argv[2]);
     cout << x << "! / (" << x << "-" << delta << ")! =" << endl;
-    cout << "\t= " << Factorial<double>::fraction(x, delta) << " (using double)" << endl;
-    cout << "\t= " << Factorial<uint64_t>::fraction(x, delta) << " (using uint64_t)" << endl;
+    cout << "\t= " << setprecision(16) << Factorial<double>::fraction(x, delta) << " (using double)" << endl;
+    cout << "\t= " << setprecision(16) << Factorial<uint64_t>::fraction(x, delta) << " (using uint64_t)" << endl;
     return 0;
 }
