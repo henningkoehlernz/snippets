@@ -13,6 +13,8 @@ public:
     // returns x! / (x-delta)!
     static T fraction(int x, int delta)
     {
+        if (delta > 170)
+            return std::numeric_limits<T>::infinity();
         if (known.size() <= x)
             known.resize(x + 1, { 1 });
         if (known[x].size() <= delta)
